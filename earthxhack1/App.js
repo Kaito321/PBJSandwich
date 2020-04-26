@@ -10,6 +10,7 @@ import logo from './assets/Full_Fill_Logo.png';
 import LogIn from './LogIn.js';
 import Home from './JadasApp.js';
 import Farmers from './FarmerApp.js';
+import NPOrgs from './NPApp.js';
 
 function Start({navigation}) {
   return (
@@ -33,8 +34,7 @@ function App() {
         <Stack.Screen name="StartPage" component={Start} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="LogIn" component={LogIn} />
-          <Stack.Screen name="Farmers" component={Farmers} />
-
+        <Stack.Screen name="Farmers" component={Farmers} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -42,29 +42,6 @@ function App() {
 
 export default App;
 
-
-//ORGINAL APP DESIGN
-/*
-export default function App() {
-  return (
-        <View style={styles.container}>
-      
-        <Image source={logo} style={styles.logo}/>
-        <Text style={styles.instructions}>
-            Username</Text>
-        <Text style={styles.instructions} >
-            Password
-        </Text>
-    
-        <TouchableOpacity
-            onPress={() => alert('this is a button!')} style={styles.button}>
-            <Text style={styles.buttonText}> LogIn </Text>
-        </TouchableOpacity>
-      
-        </View>
-  );
-}
-*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,

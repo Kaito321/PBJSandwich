@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { TouchableOpacity, Image, StyleSheet, Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -53,5 +53,5 @@ fontWeight: 'bold',
     fontSize: 20,
     color: '#fff',
 }
-});
+});*/
 

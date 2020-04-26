@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import logo from './assets/Full_Fill_Logo.png';
 import LogIn from './LogIn.js';
+import NPOrgs from './NPApp.js';
 
 function Home({navigation}){
     return (

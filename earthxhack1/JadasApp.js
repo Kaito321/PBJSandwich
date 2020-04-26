@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-//import logo from './logo.png'; 
+//import logo from './logo.png';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import logo from './assets/Full_Fill_Logo.png';
-import LogIn from './LogIn.js'
+import LogIn from './LogIn.js';
 
 function Home({navigation}){
     return (
@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
       
-  }, 
+  },
   regText: {
     fontSize: 20,
     textAlign: 'center',
     color: '#888',
-  }, 
+  },
   Ibutton: {
     padding: 20,
     borderRadius: 5,

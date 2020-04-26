@@ -1,28 +1,29 @@
 import React from 'react';
 import {Image,TextInput,TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 import pic from './pic.jpeg'; 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+function Farmers() {
   const [value, onChangeText] = React.useState(' ');
   return (
     <View style={styles.container}>
 
-        <Text style={{fontSize:32,textAlign:'center'}}>Farmers</Text>
+          <Text style={{fontSize:42,textAlign:'center', fontWeight: 'bold', color: '#A1BF34'}}>Farmers</Text>
 
 
        <Image source={pic} style={{ width: 415, height: 200, alignItems:'center' }} />
 
-          <TouchableOpacity
+    <TouchableOpacity
          style={styles.Ibutton2}>
       </TouchableOpacity>
       <Text style={styles.subText}>Name of farm:</Text>
 
 
     <TextInput
-    style={styles.textInput}
-    onChangeText={text => onChangeText(text)}
-    value={value}
-  />
+        style={styles.textInput}
+        onChangeText={text => onChangeText(text)}
+    value={value}/>
         <TouchableOpacity
          style={styles.Ibutton2}>
       </TouchableOpacity>
@@ -33,17 +34,17 @@ export default function App() {
     style={styles.textInput}
     onChangeText={text => onChangeText(text)}
     value={value}
-  />
+          />
       <TouchableOpacity
          style={styles.Ibutton2}>
       </TouchableOpacity>
-<Text style={styles.subText}>Resource to give:</Text>
+    <Text style={styles.subText}>Resource to give:</Text>
 
       <TextInput
     style={styles.textInput2}
     onChangeText={text => onChangeText(text)}
     value={value}
-  />
+          />
         <TouchableOpacity
          style={styles.Ibutton2}>
       </TouchableOpacity>
@@ -54,18 +55,21 @@ export default function App() {
   </View>
   );
 }
+export default Farmers;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+     backgroundColor: '#FFFDD4',
+     alignItems: 'center',
+     justifyContent: 'center',
+  },
   subText:{
     fontSize: 14,
     textAlign: 'left',
-    color: '#000',
+    color: '#888',
   },
-  container: {
-    flex: 1,
-    backgroundColor: '#ddd',
-    justifyContent: 'center',
-  },
+
   textInput: {
     height: 40, width: 400, borderColor: 'gray', borderWidth: 1 
   },
@@ -78,14 +82,14 @@ const styles = StyleSheet.create({
   },  
   button: {
     width: 250,
-    backgroundColor: "white",
+    backgroundColor: "#A1BF34",
     padding: 20,
-    borderRadius: 5,
+    borderRadius: 10,
     alignSelf:"center",
   },
   buttonText: {
     fontSize: 20,
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
   }, 
 

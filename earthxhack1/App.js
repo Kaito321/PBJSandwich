@@ -9,20 +9,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import logo from './assets/Full_Fill_Logo.png';
 import LogIn from './LogIn.js'
+import Home from './JadasApp.js'
 
-function HomeScreen({navigation}) {
+function Start({navigation}) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <View style={styles.container}>
           <Image source={logo} style={styles.logo}/>
-          <Text style={styles.instructions}>
-              Username</Text>
-          <Text style={styles.instructions} >
-              Password
-          </Text>
-      <Button
-          title="Go To LogIn"
-          onPress={() => navigation.navigate(LogIn)} style={styles.button}>
-                     <Text style={styles.buttonText}> LogIn </Text>
+         <Button
+          title="Begin"
+          onPress={() => navigation.navigate(Home)} style={styles.button}>
+          <Text style={styles.buttonText}> LogIn </Text>
         </Button>
     </View>
   );
@@ -34,7 +30,8 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="StartPage" component={Start} />
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="LogIn" component={LogIn} />
       </Stack.Navigator>
     </NavigationContainer>

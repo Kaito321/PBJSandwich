@@ -1,69 +1,79 @@
-import React from 'react';
+import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import logo from './logo.png'; 
+//import logo from './logo.png'; 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import logo from './assets/Full_Fill_Logo.png';
+import LogIn from './LogIn.js'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-       <Image source={logo} style={{ width: 308, height: 100.5 }} />
-      
-       <TouchableOpacity
-         style={styles.Ibutton}>
-      </TouchableOpacity>
-      
-      <Text style={styles.regText}>This is the welcome page. Welcome to Full->Fill, the app that connects a farmers surplus of food to non-profits and consumers near you!</Text>
-      
-      <TouchableOpacity
-         style={styles.Ibutton}>
-      </TouchableOpacity>
-      
-      <TouchableOpacity
-        onPress={() => alert('Consumer Page!') }  style={styles.button}>
-        <Text  style={styles.buttonText}>Consumer</Text>
-      </TouchableOpacity>
+function Home({navigation}){
+    return (
+      <View style={styles.container}>
+            <Image source={logo} style={{ width: 308, height: 100.5, resizeMode: 'contain' }} />
+        
+         <TouchableOpacity
+           style={styles.Ibutton}>
+        </TouchableOpacity>
+        
+        <Text style={styles.regText}>The world produces enough food to feed the whole population, yet we people face hunger every day. We aim to close that gap by facilitating communication between farmers that face over production to nonprofits who aim to help those facing hunger and people who need these resources.</Text>
+        
+        <TouchableOpacity
+           style={styles.Ibutton}>
+        </TouchableOpacity>
+        
+        <TouchableOpacity
+          onPress={() => alert('Consumer Page!') }  style={styles.button}>
+          <Text  style={styles.buttonText}>Consumer</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-         style={styles.Ibutton2}>
-      </TouchableOpacity>
+        <TouchableOpacity
+           style={styles.Ibutton2}>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => alert('Farmer Page!')} style={styles.button}>
-        <Text  style={styles.buttonText}>Farmer</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(LogIn)} style={styles.button}>
+          <Text  style={styles.buttonText}>Farmer</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-         style={styles.Ibutton2}>
-      </TouchableOpacity>
+        <TouchableOpacity
+           style={styles.Ibutton2}>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => alert('Non-Profit Page!')} style={styles.button}>
-        <Text  style={styles.buttonText} >Non-Profit</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(LogIn)} style={styles.button}>
+          <Text  style={styles.buttonText} >Non-Profit</Text>
+        </TouchableOpacity>
 
-    </View>
-  );
+      </View>
+    );
 }
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ddd',
+    backgroundColor: '#FFFDD4',
     alignItems: 'center',
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: "white",
-    padding: 20,
+    backgroundColor: "#A1BF34",
+    padding: 10,
     borderRadius: 5,
+    resizeMode: 'contain',
+
   },
   buttonText: {
     fontSize: 20,
-    color: '#000',
+  //fontFamily: 'bebas neue rounded',
+    fontWeight: 'bold',
+    color: '#fff',
+      
   }, 
   regText: {
     fontSize: 20,
     textAlign: 'center',
-    color: '#000',
+    color: '#888',
   }, 
   Ibutton: {
     padding: 20,

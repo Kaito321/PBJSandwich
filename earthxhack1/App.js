@@ -18,18 +18,20 @@ export default function App() {
           </Scene>
     
     <View style={styles.container}>
+          
           <Image source={logo} style={styles.logo}/>
           <Text style={styles.instructions}>
           Username</Text>
           <Text style={styles.instructions} >
             Password
           </Text>
-          
+        
           <TouchableOpacity
           onPress={() => Actions.LogIn()}
           style={styles.button}>
           <Text style={styles.buttonText}>Click to Continue</Text>
           </TouchableOpacity>
+          
     </View>
           </Router>
   );
